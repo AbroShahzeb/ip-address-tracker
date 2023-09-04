@@ -1,10 +1,13 @@
-function Search() {
+/* eslint-disable react/prop-types */
+function Search({ query, setQuery }) {
   return (
     <div className='w-96 bg-white flex items-center justify-between rounded-xl sm:w-[500px] overflow-hidden'>
       <input
         type='text'
         placeholder='Search for any IP address or domain'
         className='pl-5 py-3 w-full text-md focus:outline-none text-very-dark-gray font-medium'
+        value={query}
+        onChange={(e) => setQuery(e.target.value)}
       />
       <img
         src='/images/icon-arrow.svg'
