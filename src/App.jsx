@@ -1,8 +1,22 @@
+import Background from "./components/Background";
+import TopArea from "./components/TopArea";
+import AppLayout from "./components/AppLayout";
+import Map from "./components/Map";
+import Search from "./components/Search";
+import Results from "./components/Results";
+
 function App() {
   return (
-    <div className='w-full min-h-screen grid place-content-center text-4xl font-bold bg-emerald-800 text-slate-50'>
-      A basic vite + react app (Try)
-    </div>
+    <AppLayout>
+      <TopArea>
+        <Background />
+        <div className='absolute top-20 left-1/2 -translate-x-1/2 flex flex-col gap-5 items-center'>
+          <Search />
+          <Results />
+        </div>
+      </TopArea>
+      <Map />
+    </AppLayout>
   );
 }
 
